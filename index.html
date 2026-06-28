@@ -272,8 +272,13 @@ section{ padding:80px 70px; }
     border-top:1px solid #eef3f7;
   }
 
-  /* Hero */
-  .hero{ min-height:auto; padding:110px 20px 50px; }
+  /* Hero — stack vertically so the card sits BELOW the text, not beside it */
+  .hero{
+    min-height:auto;
+    padding:110px 20px 50px;
+    flex-direction:column;
+    align-items:flex-start;
+  }
   .hero h1{ font-size:38px; }
   .hero h2{ font-size:20px; }
   .hero p{ font-size:16px; }
@@ -282,11 +287,16 @@ section{ padding:80px 70px; }
   .floating-card{
     position:static;
     width:100%;
-    margin-top:30px;
+    max-width:340px;
+    margin-top:28px;
   }
 
   section{ padding:50px 20px; }
-  .section-title{ font-size:28px; margin-bottom:28px; }
+  .section-title{
+    font-size:26px;
+    margin-bottom:28px;
+    word-break:break-word;     /* long titles wrap instead of overflowing */
+  }
   .stats-section{ margin:24px 20px; border-radius:24px; }
 }
 
